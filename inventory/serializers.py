@@ -9,6 +9,7 @@ class InventorySerializer(serializers.ModelSerializer):
     suppliers = SupplierSerializer(many=True, read_only=True)
     supplier_ids = serializers.PrimaryKeyRelatedField(
         queryset=Supplier.objects.all(), source='suppliers', many=True, write_only=True)
+    price = serializers.DecimalField(min_value=0, max_digits=14, decimal_places=3)
     created = serializers.DateTimeField(read_only=True)
 
     class Meta(object):
