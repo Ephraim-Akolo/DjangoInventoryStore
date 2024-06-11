@@ -10,7 +10,7 @@ class Inventory(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     price = models.DecimalField(max_digits=14, decimal_places=3)
-    suppliers = models.ManyToManyField(Supplier, with_related='items')
+    suppliers = models.ManyToManyField(Supplier)
     created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self) -> str:
