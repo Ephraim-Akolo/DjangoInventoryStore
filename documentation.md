@@ -212,7 +212,7 @@ This section contains the documentation for all available endpoints in the Djang
                 "id": "e21a240d-ff0e-4cac-bfcc-ae4d50e36c16",
                 "name": "item 1",
                 "description": "description for item 1",
-                "price": "1000
+                "price": "1000"
 
 .00",
                 "created": "2024-06-12T16:31:29.277631Z"
