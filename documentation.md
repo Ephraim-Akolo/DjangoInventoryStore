@@ -425,9 +425,7 @@ This section contains the documentation for all available endpoints in the Djang
 - **Example Response**:
     ```json
     {
-        "id": "8c743c13-7eb3-4688-99ef-a1c1e88a
-
-84cf",
+        "id": "8c743c13-7eb3-4688-99ef-a1c1e88a84cf",
         "suppliers": [
             {
                 "id": "59cf51c8-23e8-41f0-bc97-60874ecb9ad9",
