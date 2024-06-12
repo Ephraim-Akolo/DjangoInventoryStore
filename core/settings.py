@@ -43,6 +43,7 @@ if os.getenv('CORS_ALLOWED_ORIGINS'):
 
 REST_FRAMEWORK = { 
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema', 
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
