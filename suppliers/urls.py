@@ -3,6 +3,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.ListcreateSupplierItems.as_view()),
-    path('<uuid:pk>/', views.RetrieveUpdateInventoryItems.as_view()),
+    path('', views.ListcreateSuppliers.as_view(), name='list-create-suppliers'),
+    path('<uuid:pk>/', views.RetrieveUpdateSuppliers.as_view(), name='retrieve-update-suppliers'),
 ]
