@@ -7,7 +7,7 @@ from uuid import uuid4
 
 class Inventory(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=12, decimal_places=2)
     suppliers = models.ManyToManyField(Supplier, related_name='items')
