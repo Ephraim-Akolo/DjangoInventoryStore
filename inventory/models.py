@@ -10,8 +10,8 @@ class Inventory(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
     price = models.DecimalField(max_digits=12, decimal_places=2)
-    suppliers = models.ManyToManyField(Supplier)
-    created = models.DateTimeField(auto_now_add=True)
+    suppliers = models.ManyToManyField(Supplier, related_name='items')
+    created = models.DateTimeField(auto_now_add=True, db_index=True)
 
     def __str__(self) -> str:
         return self.name

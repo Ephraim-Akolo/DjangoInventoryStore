@@ -4,10 +4,10 @@ from .serializers import SupplierSerializer
 
 
 class ListcreateSuppliers(generics.ListCreateAPIView):
-    queryset = Supplier.objects.all().order_by('-date_joined')
+    queryset = Supplier.objects.prefetch_related('items').order_by('-date_joined')
     serializer_class = SupplierSerializer
 
 
 class RetrieveUpdateSuppliers(generics.RetrieveUpdateAPIView):
-    queryset = Supplier.objects.all()
+    queryset = Supplier.objects.prefetch_related('items').all()
     serializer_class = SupplierSerializer

@@ -10,7 +10,7 @@ class Supplier(models.Model):
     mobile_number = models.CharField(max_length=15, unique=True)
     address = models.TextField(blank=True)
     other_contact_info = models.TextField(blank=True)
-    date_joined = models.DateTimeField(auto_now_add=True)
+    date_joined = models.DateTimeField(auto_now_add=True, db_index=True)
 
     def __str__(self) -> str:
         return self.name
