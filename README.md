@@ -33,7 +33,7 @@ Follow these steps to get the application up and running.
 
 ### Step 3: Configure Environment Variables
 
-1. Set the necessary environmental variables [SECRET_KEY, DATABASE_URL, ALLOWED_HOSTS (separated by whitespaces), CSRF_TRUSTED_ORIGINS (separated by whitespaces), CORS_ALLOWED_ORIGINS (separated by whitespaces), CORS_ORIGIN_ALLOW_ALL, CORS_ALLOW_CREDENTIALS, DEBUG]
+1. Set the necessary environmental variables (SECRET_KEY, DATABASE_URL, ALLOWED_HOSTS, CSRF_TRUSTED_ORIGINS, CORS_ALLOWED_ORIGINS, CORS_ORIGIN_ALLOW_ALL, CORS_ALLOW_CREDENTIALS, DEBUG). [sample.env](sample.env) shows an example of the `.env` file.
 3. **Ensure your `.env` file is in the root directory** if you have the `.env` file that contains all the necessary environment variables. You give the `.env` file location on the settings file where it is loaded using `dotenv` package.
 
 ### Step 4: Apply Migrations
@@ -44,7 +44,14 @@ Follow these steps to get the application up and running.
     python manage.py migrate
     ```
 
-### Step 5: Run the Server
+### Step 5: Test the Server Code
+
+1. **Run the Test Client**:
+    ```sh
+    python manage.py test
+    ```
+
+### Step 6: Run the Server
 
 1. **Start the development server**:
     ```sh
@@ -55,3 +62,6 @@ Follow these steps to get the application up and running.
 
 - The application is available at `http://127.0.0.1:8000/` or `http://localhost:8000/`
 - Navigate to `http://127.0.0.1:8000/docs/` to interact with the interactive swagger-ui view.
+
+### API Documentation
+- The api documentation is available at [documentation.md](documentation.md)
