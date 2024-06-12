@@ -9,7 +9,7 @@ class Inventory(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     name = models.CharField(max_length=100)
     description = models.TextField()
-    price = models.DecimalField(max_digits=14, decimal_places=3)
+    price = models.DecimalField(max_digits=12, decimal_places=2)
     suppliers = models.ManyToManyField(Supplier)
     created = models.DateTimeField(auto_now_add=True)
 
